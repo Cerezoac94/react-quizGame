@@ -13,6 +13,122 @@ const preg = [
 				'respuestas_incorrectas': ['Pablo Picasso', 'Salvador Dalí'],
 				'respuesta_correcta': 'Leonardo da Vinci',
 			},
+			{
+				'id': '3f',
+				'pregunta': '¿Cuál es la capital de España?',
+				'respuestas_incorrectas': ['Barcelona', 'Valencia'],
+				'respuesta_correcta': 'Madrid',
+			},
+			{
+				'id': '4f',
+				'pregunta': '¿En qué continente se encuentra el país de México?',
+				'respuestas_incorrectas': ['Europa', 'Asia'],
+				'respuesta_correcta': 'América del Norte',
+			},
+			{
+				'id': '5f',
+				'pregunta': '¿Cuál es el animal terrestre más grande del mundo?',
+				'respuestas_incorrectas': ['León', 'Jirafa'],
+				'respuesta_correcta': 'Elefante',
+			},
+			{
+				'id': '6f',
+				'pregunta': '¿Cómo se llama la moneda oficial de Japón?',
+				'respuestas_incorrectas': ['Euro', 'Dólar'],
+				'respuesta_correcta': 'Yen',
+			},
+			{
+				'id': '7f',
+				'pregunta': '¿Cuál es el océano más grande del mundo?',
+				'respuestas_incorrectas': ['Atlántico', 'Índico'],
+				'respuesta_correcta': 'Pacífico',
+			},
+			{
+				'id': '8f',
+				'pregunta': '¿Qué es el ADN?',
+				'respuestas_incorrectas': ['Una enfermedad', 'Una proteína'],
+				'respuesta_correcta': 'Un material genético',
+			},
+			{
+				'id': '9f',
+				'pregunta': '¿Cuál es la capital de Italia?',
+				'respuestas_incorrectas': ['Venecia', 'Milán'],
+				'respuesta_correcta': 'Roma',
+			},
+			{
+				'id': '10f',
+				'pregunta': '¿Quién escribió la novela "Don Quijote de la Mancha"?',
+				'respuestas_incorrectas': [
+					'Gabriel García Márquez',
+					'William Shakespeare',
+				],
+				'respuesta_correcta': 'Miguel de Cervantes',
+			},
+			{
+				'id': '11f',
+				'pregunta': '¿En qué país se encuentra la Torre Eiffel?',
+				'respuestas_incorrectas': ['Alemania', 'Italia'],
+				'respuesta_correcta': 'Francia',
+			},
+			{
+				'id': '12f',
+				'pregunta': '¿Cuál es el planeta más cercano al Sol?',
+				'respuestas_incorrectas': ['Venus', 'Marte'],
+				'respuesta_correcta': 'Mercurio',
+			},
+			{
+				'id': '13f',
+				'pregunta':
+					'¿Cómo se llama el océano que se encuentra al sur de la Antártida?',
+				'respuestas_incorrectas': ['Índico', 'Atlántico'],
+				'respuesta_correcta': 'Astral',
+			},
+			{
+				'id': '14f',
+				'pregunta': '¿Cuál es la capital de Estados Unidos?',
+				'respuestas_incorrectas': ['Nueva York', 'Los Ángeles'],
+				'respuesta_correcta': 'Washington D.C.',
+			},
+			{
+				'id': '15f',
+				'pregunta': '¿Quién escribió "Romeo y Julieta"?',
+				'respuestas_incorrectas': ['Edgar Allan Poe', 'Oscar Wilde'],
+				'respuesta_correcta': 'William Shakespeare',
+			},
+			{
+				'id': '16f',
+				'pregunta': '¿En qué país se encuentra la Gran Muralla China?',
+				'respuestas_incorrectas': ['Japón', 'Corea del Sur'],
+				'respuesta_correcta': 'China',
+			},
+			{
+				'id': '17f',
+				'pregunta':
+					'¿Cuál es el monumento más famoso de la ciudad de Nueva York?',
+				'respuestas_incorrectas': [
+					'Estatua de la Libertad',
+					'Rockefeller Center',
+				],
+				'respuesta_correcta': 'Empire State Building',
+			},
+			{
+				'id': '18f',
+				'pregunta': '¿Cómo se llama la moneda oficial de Reino Unido?',
+				'respuestas_incorrectas': ['Euro', 'Dólar'],
+				'respuesta_correcta': 'Libra esterlina',
+			},
+			{
+				'id': '19f',
+				'pregunta': '¿Quién es el autor de la obra "La Odisea"?',
+				'respuestas_incorrectas': ['Dante Alighieri', 'William Shakespeare'],
+				'respuesta_correcta': 'Homero',
+			},
+			{
+				'id': '20f',
+				'pregunta': '¿Cuál es el continente más grande del mundo?',
+				'respuestas_incorrectas': ['América del Sur', 'África'],
+				'respuesta_correcta': 'Asia',
+			},
 		],
 	},
 	{
@@ -28,6 +144,7 @@ const preg = [
 				'respuesta_correcta': 'Vincent van Gogh',
 			},
 			{
+				'id': '2m',
 				'pregunta': '¿Quién escribió la novela "1984"?',
 				'respuestas_incorrectas': [
 					'Ernest Hemingway',
@@ -35,6 +152,156 @@ const preg = [
 					'J.D. Salinger',
 				],
 				'respuesta_correcta': 'George Orwell',
+			},
+			{
+				'id': '3m',
+				'pregunta': '¿Cuál es la capital de Canadá?',
+				'respuestas_incorrectas': ['Toronto', 'Montreal', 'Vancouver'],
+				'respuesta_correcta': 'Ottawa',
+			},
+			{
+				'id': '4m',
+				'pregunta': '¿En qué país se encuentra la ciudad de Machu Picchu?',
+				'respuestas_incorrectas': ['Chile', 'Brasil', 'México'],
+				'respuesta_correcta': 'Perú',
+			},
+			{
+				'id': '5m',
+				'pregunta': '¿Quién escribió "La Divina Comedia"?',
+				'respuestas_incorrectas': [
+					'William Shakespeare',
+					'Miguel de Cervantes',
+					'Geoffrey Chaucer',
+				],
+				'respuesta_correcta': 'Dante Alighieri',
+			},
+			{
+				'id': '6m',
+				'pregunta': '¿Cuál es la ciudad más poblada del mundo?',
+				'respuestas_incorrectas': ['Nueva York', 'Shanghái', 'São Paulo'],
+				'respuesta_correcta': 'Tokio',
+			},
+			{
+				'id': '7m',
+				'pregunta': '¿En qué año se fundó la compañía de tecnología Apple?',
+				'respuestas_incorrectas': ['1974', '1980', '1984'],
+				'respuesta_correcta': '1976',
+			},
+			{
+				'id': '8m',
+				'pregunta': 'Qué afirma el principio de Arquímedes?',
+				'respuestas_incorrectas': [
+					'Todo objeto en reposo permanece en reposo y todo objeto en movimiento permanece en movimiento, a menos que actúe sobre él una fuerza neta.',
+					'La energía total del universo es constante.',
+					'La fuerza que actúa sobre un cuerpo es directamente proporcional a la aceleración que adquiere.',
+				],
+				'respuesta_correcta':
+					'Todo cuerpo sumergido en un fluido experimenta una fuerza hacia arriba igual al peso del fluido desplazado.',
+			},
+			{
+				'id': '9m',
+				'pregunta': '¿Cuál es el país más grande del mundo por área terrestre?',
+				'respuestas_incorrectas': ['China', 'Estados Unidos', 'Canadá'],
+				'respuesta_correcta': 'Rusia',
+			},
+			{
+				'id': '10m',
+				'pregunta': '¿Quién compuso la famosa obra musical "La Traviata"?',
+				'respuestas_incorrectas': [
+					'Wolfgang Amadeus Mozart',
+					'Ludwig van Beethoven',
+					'Johann Sebastian Bach',
+				],
+				'respuesta_correcta': 'Giuseppe Verdi',
+			},
+			{
+				'id': '11m',
+				'pregunta': '¿En qué país se encuentra el Parque Nacional Kruger?',
+				'respuestas_incorrectas': ['Kenia', 'Tanzania', 'Uganda'],
+				'respuesta_correcta': 'Sudáfrica',
+			},
+			{
+				'id': '12m',
+				'pregunta': '¿Quién escribió la novela "Matar a un ruiseñor"?',
+				'respuestas_incorrectas': [
+					'F. Scott Fitzgerald',
+					'J.D. Salinger',
+					'Truman Capote',
+				],
+				'respuesta_correcta': 'Harper Lee',
+			},
+			{
+				'id': '13m',
+				'pregunta': '¿Cuál es el río más largo de Europa?',
+				'respuestas_incorrectas': ['Danubio', 'Rin', 'Támesis'],
+				'respuesta_correcta': 'Volga',
+			},
+			{
+				'id': '14m',
+				'pregunta': '¿Quién es el autor de la pintura "El grito"?',
+				'respuestas_incorrectas': [
+					'Pablo Picasso',
+					'Vincent van Gogh',
+					'Salvador Dalí',
+				],
+				'respuesta_correcta': 'Edvard Munch',
+			},
+			{
+				'id': '15m',
+				'pregunta': '¿Que significan las siglas "OTAN"?',
+				'respuestas_incorrectas': [
+					'Organización de Trabajadores de América del Norte',
+					'Organización de Tratados de Asia y Norteamérica',
+					'Organización de Tecnología y Avances Navales',
+				],
+				'respuesta_correcta': 'Organización de Tratados del Atlántico Norte',
+			},
+			{
+				'id': '16m',
+				'pregunta': '¿Cuál es el edificio más alto del mundo en 2023?',
+				'respuestas_incorrectas': [
+					'Shanghai Tower',
+					'Abraj Al Bait Clock Tower',
+					'Taipei 101',
+				],
+				'respuesta_correcta': 'Burj Khalifa',
+			},
+			{
+				'id': '17m',
+				'pregunta': '¿Quién es el autor de la novela el retrato de Dorian Gray',
+				'respuestas_incorrectas': [
+					'Charles Dickens',
+					'Jane Austen',
+					'Fyodor Dostoevsky',
+				],
+				'respuesta_correcta': 'Oscar Wilde',
+			},
+			{
+				'id': '18m',
+				'pregunta': '¿Quién escribió la novela "El Gran Gatsby"?',
+				'respuestas_incorrectas': [
+					'Ernest Hemingway',
+					'Truman Capote',
+					'J.D. Salinger',
+				],
+				'respuesta_correcta': 'F. Scott Fitzgerald',
+			},
+			{
+				'id': '19m',
+				'pregunta': '¿Cuál es la capital de Australia?',
+				'respuestas_incorrectas': ['Melbourne', 'Canberra', 'Brisbane'],
+				'respuesta_correcta': 'Sídney',
+			},
+			{
+				'id': '20m',
+				'pregunta':
+					'¿Quién es el autor de la novela "Crónica de una muerte anunciada"?',
+				'respuestas_incorrectas': [
+					'Pablo Neruda',
+					'Octavio Paz',
+					'Jorge Luis Borges',
+				],
+				'respuesta_correcta': 'Gabriel García Márquez',
 			},
 		],
 	},
@@ -404,4 +671,4 @@ const preg = [
 			},
 		],
 	},
-];
+]
