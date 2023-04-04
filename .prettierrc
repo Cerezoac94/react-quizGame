@@ -2,6 +2,8 @@
 	"useTabs": true,
 	"semi": false,
 	"jsxSingleQuote": true,
+	"singleQuote": true,
 	"bracketSameLine": true,
-	"arrowParens": "avoid"
+	"arrowParens": "avoid",
+	"quoteProps": "preserve"
 }
