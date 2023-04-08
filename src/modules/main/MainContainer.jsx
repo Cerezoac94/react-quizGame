@@ -1,4 +1,4 @@
-import { useMenu } from '../../../hooks/useMenu'
+import { useMenu } from '../../hooks/useMenu'
 import { useNavigate } from 'react-router-dom'
 import Button from '../../components/button/Button'
 import Title from '../../components/title/Title'
@@ -7,13 +7,15 @@ import TotalQuestionMenu from './components/totalQuestionMenu/TotalQuestionMenu'
 import NotesMenu from './components/notes/NotesMenu'
 
 const MainContainer = () => {
-	const { page, handlePage, difficulty, totalQuestions } = useMenu()
+	const { page, handlePage } = useMenu()
 	const navigate = useNavigate()
 
 	const handleStart = () => {
 		// handlePage(true)
 		navigate('/game')
 	}
+
+	// useEfect => en return llamar handlerReset
 
 	return (
 		<section>

@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 
-export const useMenu = () => {
+export const menuContext = createContext()
+const { Provider } = menuContext
+
+const MenuContext = ({ children }) => {
 	const [difficulty, setDifficulty] = useState('fácil')
 	const [totalQuestions, setTotalQuestions] = useState(5)
-	const [page, setPage] = useState(1)
 
 	const handleDifficulty = value => {
 		setDifficulty(value)
@@ -11,21 +13,19 @@ export const useMenu = () => {
 	const handleTotalQuestions = value => {
 		setTotalQuestions(value)
 	}
+
 	const resetGame = () => {
-		setPage(1)
 		setDifficulty('fácil')
 		setTotalQuestions(5)
 	}
-	const handlePage = () => {
-		setPage(page + 1)
-	}
-	return {
+
+	const menuData = {
 		difficulty,
-		totalQuestions,
-		page,
-		handlePage,
-		resetGame,
 		handleDifficulty,
+		totalQuestions,
 		handleTotalQuestions,
+		resetGame,
 	}
+	return <Provider value={menuData}>{children}</Provider>
 }
+export default MenuContext
