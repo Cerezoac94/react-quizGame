@@ -1,8 +1,9 @@
 import Button from '../../../../components/button/Button'
-import { useMenu } from '../../../../../hooks/useMenu'
+import { useContext } from 'react'
+import { menuContext } from '../../../../context/MenuContext'
 
 const DifficultyMenu = () => {
-	const { handleDifficulty } = useMenu()
+	const { handleDifficulty } = useContext(menuContext)
 	return (
 		<section>
 			<h2>Selecciona la dificultad</h2>
