@@ -1,4 +1,4 @@
-const preg = [
+export const preg = [
 	{
 		'Fácil': [
 			{

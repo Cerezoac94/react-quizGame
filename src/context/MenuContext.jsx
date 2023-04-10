@@ -4,7 +4,7 @@ export const menuContext = createContext()
 const { Provider } = menuContext
 
 const MenuContext = ({ children }) => {
-	const [difficulty, setDifficulty] = useState('fácil')
+	const [difficulty, setDifficulty] = useState('Fácil')
 	const [totalQuestions, setTotalQuestions] = useState(5)
 
 	const handleDifficulty = value => {

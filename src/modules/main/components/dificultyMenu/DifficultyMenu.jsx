@@ -8,11 +8,11 @@ const DifficultyMenu = () => {
 		<section>
 			<h2>Selecciona la dificultad</h2>
 			<section>
-				<Button f={() => handleDifficulty('fácil')} text='Fácil' />
-				<Button f={() => handleDifficulty('medio')} text='Medio' />
-				<Button f={() => handleDifficulty('difícil')} text='Difícil' />
+				<Button f={() => handleDifficulty('Fácil')} text='Fácil' />
+				<Button f={() => handleDifficulty('Medio')} text='Medio' />
+				<Button f={() => handleDifficulty('Difícil')} text='Difícil' />
 				<Button
-					f={() => handleDifficulty('extra difícil')}
+					f={() => handleDifficulty('Extra difícil')}
 					text='Extra difícil'
 				/>
 			</section>

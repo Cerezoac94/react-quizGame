@@ -1,9 +1,10 @@
-import CardQuestion from './components/CardQuestion'
+import CardQuestionContainer from './components/CardQuestionContainer'
 
 const GameContainer = () => {
 	return (
 		<section>
-			<CardQuestion />
+			<CardQuestionContainer />
+
 			{/* comodines component */}
 			{/* reloj component */}
 		</section>
