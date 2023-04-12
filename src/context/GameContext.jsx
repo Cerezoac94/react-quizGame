@@ -12,6 +12,7 @@ const GameContext = ({ children }) => {
 
 	const dataGame = {
 		handleHits,
+		hits,
 	}
 
 	return <Provider value={dataGame}>{children}</Provider>
