@@ -10,7 +10,6 @@ const CardQuestion = ({ questions }) => {
 	const [options, setOptions] = useState([])
 	// const [answer, setAnswer] = useState('')
 	const { handleHits, hits } = useContext(gameContext)
-	console.log('🚀 ~ file: CardQuestion.jsx:13 ~ CardQuestion ~ hits:', hits)
 	// console.log(questions[0].respuesta_correcta)
 	// console.log(questionNumber)
 	let answer = ''
@@ -27,7 +26,7 @@ const CardQuestion = ({ questions }) => {
 
 	const handleQuestion = i => {
 		if (answer == questions[i - 1]?.respuesta_correcta) handleHits()
-		setQuestion(questions[i].pregunta)
+		setQuestion(questions[i]?.pregunta)
 		handleQuestionNumber()
 		setOptions([
 			...questions[i]?.respuestas_incorrectas,
@@ -45,9 +44,9 @@ const CardQuestion = ({ questions }) => {
 
 	return (
 		<section>
-			<p>{question}</p>
+			<p>{`${questionNumber}. ${question}`}</p>
 			<section>
-				{options?.sort(handleRandomOptions).map((o, i) => (
+				{options?.sort(handleRandomOptions)?.map((o, i) => (
 					<p onClick={() => handleAnswer(o)} key={i}>
 						{o}
 					</p>

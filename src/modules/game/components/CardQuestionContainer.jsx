@@ -7,7 +7,7 @@ const CardQuestionContainer = () => {
 	const { difficulty, totalQuestions } = useContext(menuContext)
 	const questions = useQuestions(difficulty, totalQuestions)
 
-	return <CardQuestion questions={questions[difficulty]} />
+	return <CardQuestion questions={questions} />
 }
 
 export default CardQuestionContainer

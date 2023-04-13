@@ -10,6 +10,8 @@ const MainContainer = () => {
 	const { page, handlePage } = useMenu()
 	const navigate = useNavigate()
 
+	//Aqui se pondra el de cambiar la pagina directo
+
 	const handleStart = () => {
 		// handlePage(true)
 		navigate('/game')
