@@ -1,58 +1,66 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useGame } from '../../../hooks/useGame'
 import Button from '../../../components/button/Button'
 import { useContext } from 'react'
 import { gameContext } from '../../../context/GameContext'
 
-const CardQuestion = ({ questions }) => {
-	const [question, setQuestion] = useState()
-	const { questionNumber, handleQuestionNumber } = useGame()
-	const [options, setOptions] = useState([])
+const CardQuestion = () => {
+	const { handleHits, hits, options } = useContext(gameContext)
+	console.log(options)
+	const { questionNumber, handleQuestionNumber, question } = useGame()
 	// const [answer, setAnswer] = useState('')
-	const { handleHits, hits } = useContext(gameContext)
+
 	// console.log(questions[0].respuesta_correcta)
 	// console.log(questionNumber)
-	let answer = ''
-	if (questions && !question) {
-		setQuestion(questions[0]?.pregunta)
-		setOptions([
-			...questions[0]?.respuestas_incorrectas,
-			questions[0]?.respuesta_correcta,
-		])
-	}
-	const handleRandomOptions = () => {
-		return Math.random() - 0.5
-	}
+	// let answer = ''
+	// if (questions && !question) {
+	// 	setQuestion(questions[0]?.pregunta)
+	// 	setOptions([
+	// 		...questions[0]?.respuestas_incorrectas,
+	// 		questions[0]?.respuesta_correcta,
+	// 	])
+	// }
+	// const handleRandomOptions = () => {
+	// 	return Math.random() - 0.5
+	// }
 
-	const handleQuestion = i => {
-		if (answer == questions[i - 1]?.respuesta_correcta) handleHits()
-		setQuestion(questions[i]?.pregunta)
-		handleQuestionNumber()
-		setOptions([
-			...questions[i]?.respuestas_incorrectas,
-			questions[i]?.respuesta_correcta,
-		])
-	}
+	// const handleQuestion = i => {
+	// 	if (answer == questions[i - 1]?.respuesta_correcta) handleHits()
+	// 	setQuestion(questions[i]?.pregunta)
+	// 	handleQuestionNumber()
+	// 	setOptions([
+	// 		...questions[i]?.respuestas_incorrectas,
+	// 		questions[i]?.respuesta_correcta,
+	// 	])
+	// }
 
-	const handleAnswer = o => {
-		answer = o
-	}
+	// const handleAnswer = o => {
+	// 	answer = o
+	// }
 
 	// console.log(question)
 	// const arrSort = options?.sort(handleRandomAnswers)
 	// console.log(arrSort)
 
+	const handleQuestion = () => {
+		handleQuestionNumber()
+	}
+
+	// useEffect(() => {
+	// 	if (!question) return
+	// 	console.log(question)
+	// 	console.log(options)
+	// }, [question])
+
+	console.log(questionNumber)
+
 	return (
 		<section>
-			<p>{`${questionNumber}. ${question}`}</p>
+			<p></p>
 			<section>
-				{options?.sort(handleRandomOptions)?.map((o, i) => (
-					<p onClick={() => handleAnswer(o)} key={i}>
-						{o}
-					</p>
-				))}
+				<p onClick={() => handleAnswer(o)}></p>
 			</section>
-			<Button f={() => handleQuestion(questionNumber)} text={'Siguiente'} />
+			<Button f={() => handleQuestion()} text={'Siguiente'} />
 		</section>
 	)
 }

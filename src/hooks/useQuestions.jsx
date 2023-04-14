@@ -2,12 +2,17 @@ import { useState, useEffect } from 'react'
 import { preg } from '../utils/constants'
 
 const useQuestions = (difficulty, totalQuestions) => {
-	const [questions, setQuestions] = useState()
-	const dataQuestions = preg.find(elem => Object.keys(elem)[0] == difficulty)
+	const [dataQuestions, setQuestions] = useState()
+	const data = preg.find(elem => Object.keys(elem)[0] == difficulty)
+	const handleRandomData = () => {
+		return Math.random() - 0.5
+	}
 
 	useEffect(
 		() =>
-			handleSetQuestions(dataQuestions[difficulty].slice(0, totalQuestions)),
+			handleSetQuestions(
+				data[difficulty].sort(handleRandomData).slice(0, totalQuestions)
+			),
 		[]
 	)
 
@@ -15,6 +20,6 @@ const useQuestions = (difficulty, totalQuestions) => {
 		setQuestions(dt)
 	}
 
-	return questions
+	return dataQuestions
 }
 export default useQuestions

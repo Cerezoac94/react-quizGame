@@ -1,17 +1,46 @@
-import { useState, createContext } from 'react'
+import { useState, createContext, useEffect } from 'react'
 
 export const gameContext = createContext()
 const { Provider } = gameContext
 
 const GameContext = ({ children }) => {
+	const [questions, setQuestions] = useState([])
+	const [options, setOptions] = useState([])
+	const [answers, setAnswers] = useState([])
 	const [hits, setHits] = useState(0)
 
-	const handleHits = () => {
-		setHits(hits + 1)
+	const handleRandomOptions = () => {
+		return Math.random() - 0.5
+	}
+	const handleQuestions = dq => {
+		for (const q of dq) {
+			setQuestions(questions.push(q?.pregunta))
+			setOptions(
+				options.push(
+					[...q?.respuestas_incorrectas, q?.respuesta_correcta].sort(
+						handleRandomOptions
+					)
+				)
+			)
+			setAnswers(answers.push(q.respuesta_correcta))
+		}
+		console.log(options)
+	}
+	useEffect(() => {
+		console.log(options)
+		if (!options.length) return
+		console.log(options)
+	}, [options])
+
+	const handleHits = (value, qn) => {
+		if (value == answers[qn]) setHits(hits + 1)
 	}
 
 	const dataGame = {
+		handleQuestions,
 		handleHits,
+		questions,
+		options,
 		hits,
 	}
 

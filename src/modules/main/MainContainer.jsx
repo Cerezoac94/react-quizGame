@@ -1,5 +1,5 @@
-import { useMenu } from '../../hooks/useMenu'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 import Button from '../../components/button/Button'
 import Title from '../../components/title/Title'
 import DifficultyMenu from './components/dificultyMenu/DifficultyMenu'
@@ -7,10 +7,12 @@ import TotalQuestionMenu from './components/totalQuestionMenu/TotalQuestionMenu'
 import NotesMenu from './components/notes/NotesMenu'
 
 const MainContainer = () => {
-	const { page, handlePage } = useMenu()
 	const navigate = useNavigate()
+	const [page, setPage] = useState(1)
 
-	//Aqui se pondra el de cambiar la pagina directo
+	const handlePage = () => {
+		setPage(page + 1)
+	}
 
 	const handleStart = () => {
 		// handlePage(true)
