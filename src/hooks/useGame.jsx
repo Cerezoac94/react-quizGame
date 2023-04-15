@@ -1,25 +1,18 @@
-import { useContext, useEffect, useState } from 'react'
-import { gameContext } from '../context/GameContext'
+import { useEffect, useState } from 'react'
 
 export const useGame = () => {
-	const {
-		questions,
-		options: dataOptions,
-		handleHits,
-	} = useContext(gameContext)
 	const [questionNumber, setQuestionNumber] = useState(1)
 	const [question, setQuestion] = useState('')
 	const [options, setOptions] = useState([])
-	console.log(questions)
-	console.log(dataOptions)
 	const handleQuestion = () => {
-		setQuestion(questions[questionNumber - 1])
-		setOptions(dataOptions[questionNumber - 1])
+		// setQuestion(questions[questionNumber - 1])
+		// setOptions(dataOptions[questionNumber - 1])
+		// setear pregunta y opciones de respuesta
 	}
-	useEffect(() => {
-		if (!questions) return
-		handleQuestion()
-	}, [questions])
+	// useEffect(() => {
+	// 	if (!questions) return
+	// 	handleQuestion()
+	// }, [questions])
 
 	const handleQuestionNumber = () => {
 		// validar no excederse de total questions

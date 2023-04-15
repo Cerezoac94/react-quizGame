@@ -13,8 +13,10 @@ const GameContext = ({ children }) => {
 		return Math.random() - 0.5
 	}
 	const handleQuestions = dq => {
+		console.log(dq)
+		console.log(questions)
 		for (const q of dq) {
-			setQuestions(questions.push(q?.pregunta))
+			setQuestions(questions.push([q?.pregunta]))
 			setOptions(
 				options.push(
 					[...q?.respuestas_incorrectas, q?.respuesta_correcta].sort(
@@ -25,9 +27,10 @@ const GameContext = ({ children }) => {
 			setAnswers(answers.push(q.respuesta_correcta))
 		}
 		console.log(options)
+		console.log(questions)
 	}
+	console.log(options)
 	useEffect(() => {
-		console.log(options)
 		if (!options.length) return
 		console.log(options)
 	}, [options])

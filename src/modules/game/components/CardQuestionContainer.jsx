@@ -6,14 +6,13 @@ import { gameContext } from '../../../context/GameContext'
 
 const CardQuestionContainer = () => {
 	const { difficulty, totalQuestions } = useContext(menuContext)
-	const dataQuestions = useQuestions(difficulty, totalQuestions)
 	const { handleQuestions } = useContext(gameContext)
-
-	useEffect(() => {
-		if (dataQuestions) {
-			handleQuestions(dataQuestions)
-		}
-	}, [dataQuestions])
+	const { questions, options, answers } = useQuestions(
+		difficulty,
+		totalQuestions
+	)
+	console.log(questions)
+	console.log(options)
 
 	return <CardQuestion />
 }

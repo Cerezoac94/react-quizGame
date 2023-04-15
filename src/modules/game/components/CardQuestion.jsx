@@ -5,8 +5,10 @@ import { useContext } from 'react'
 import { gameContext } from '../../../context/GameContext'
 
 const CardQuestion = () => {
-	const { handleHits, hits, options } = useContext(gameContext)
-	console.log(options)
+	const { handleHits, hits, options, questions } = useContext(gameContext)
+	console.log('options del contexto en cardQuestion', options)
+	console.log('questions del contexto en cardQuestion', questions)
+
 	const { questionNumber, handleQuestionNumber, question } = useGame()
 	// const [answer, setAnswer] = useState('')
 
@@ -52,7 +54,7 @@ const CardQuestion = () => {
 	// 	console.log(options)
 	// }, [question])
 
-	console.log(questionNumber)
+	// console.log(questionNumber)
 
 	return (
 		<section>
