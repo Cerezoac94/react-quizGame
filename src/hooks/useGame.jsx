@@ -1,24 +1,28 @@
 import { useEffect, useState } from 'react'
 
-export const useGame = () => {
-	const [questionNumber, setQuestionNumber] = useState(1)
+export const useGame = (handleHits, op, questions) => {
+	const [questionNumber, setQuestionNumber] = useState(0)
 	const [question, setQuestion] = useState('')
 	const [options, setOptions] = useState([])
-	const handleQuestion = () => {
-		// setQuestion(questions[questionNumber - 1])
-		// setOptions(dataOptions[questionNumber - 1])
-		// setear pregunta y opciones de respuesta
-	}
-	// useEffect(() => {
-	// 	if (!questions) return
-	// 	handleQuestion()
-	// }, [questions])
 
-	const handleQuestionNumber = () => {
-		// validar no excederse de total questions
+	const handleQuestion = qn => {
+		setQuestion(questions[qn])
+		setOptions(op[qn])
+	}
+
+	const handleDataQuestion = v => {
 		setQuestionNumber(questionNumber + 1)
-		handleQuestion()
+		handleHits(v, questionNumber)
+		handleQuestion(questionNumber + 1)
 	}
+	useEffect(() => {
+		if (questions.length) handleQuestion(questionNumber)
+	}, [questions])
 
-	return { questionNumber, handleQuestionNumber, question, options }
+	return {
+		questionNumber,
+		question,
+		options,
+		handleDataQuestion,
+	}
 }

@@ -5,7 +5,6 @@ const useQuestions = (difficulty, totalQuestions) => {
 	const [questions, setQuestions] = useState([])
 	const [options, setOptions] = useState([])
 	const [answers, setAnswers] = useState([])
-	// const [loading, setLoading] = useState(false)
 	const handleRandomData = () => {
 		return Math.random() - 0.5
 	}

@@ -11,8 +11,10 @@ const CardQuestionContainer = () => {
 		difficulty,
 		totalQuestions
 	)
-	console.log(questions)
-	console.log(options)
+	useEffect(() => {
+		if (!questions) return
+		handleQuestions(questions, options, answers)
+	}, [questions])
 
 	return <CardQuestion />
 }
