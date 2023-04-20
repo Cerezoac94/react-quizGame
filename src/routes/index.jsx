@@ -1,7 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom'
+import App from '../App'
 import Main from '../views/Main'
 import Game from '../views/Game'
-import App from '../App'
+import Results from '../views/Results'
 
 const router = createBrowserRouter([
 	{
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
 			{
 				path: '/game',
 				element: <Game />,
+			},
+			{
+				path: '/results',
+				element: <Results />,
 			},
 		],
 	},

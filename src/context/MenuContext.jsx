@@ -15,14 +15,14 @@ const MenuContext = ({ children }) => {
 	}
 
 	const resetGame = () => {
-		setDifficulty('fácil')
+		setDifficulty('Fácil')
 		setTotalQuestions(5)
 	}
 
 	const menuData = {
 		difficulty,
-		handleDifficulty,
 		totalQuestions,
+		handleDifficulty,
 		handleTotalQuestions,
 		resetGame,
 	}

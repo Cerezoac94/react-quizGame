@@ -15,11 +15,8 @@ const MainContainer = () => {
 	}
 
 	const handleStart = () => {
-		// handlePage(true)
 		navigate('/game')
 	}
-
-	// useEfect => en return llamar handlerReset
 
 	return (
 		<section>
