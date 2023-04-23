@@ -19,8 +19,8 @@ const MainContainer = () => {
 	}
 
 	return (
-		<section>
-			<Title text='QUIZ GAME' />
+		<section className='flex flex-col text-center justify-around items-center w-11/12 h-5/6 bg-slate-600'>
+			{page == 3 ? <Title text='NOTES' /> : <Title text='QUIZ GAME' />}
 			{page == 1 && <DifficultyMenu />}
 			{page == 2 && <TotalQuestionMenu />}
 			{page == 3 && <NotesMenu />}
