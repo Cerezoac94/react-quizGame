@@ -26,11 +26,16 @@ const CardQuestion = () => {
 	}
 
 	return (
-		<section>
-			<p>{`${questionNumber + 1}. ${question}`}</p>
-			<section>
+		<section className='h-full flex flex-col items-center justify-around'>
+			<p className='w-[800px] h-28 flex flex-col border-2 border-white rounded-xl text-3xl font-semibold'>{`Pregunta ${
+				questionNumber + 1
+			}:  ${question}`}</p>
+			<section className='w-[720px] flex flex-wrap justify-center gap-3'>
 				{options.map((option, i) => (
-					<p key={i} onClick={() => handleAnswer(option)}>
+					<p
+						className=' w-[330px] h-[85px] text-3xl py-3 px-4 border border-white rounded-xl hover:border-blue-700 hover:border-2'
+						key={i}
+						onClick={() => handleAnswer(option)}>
 						{option}
 					</p>
 				))}
