@@ -4,7 +4,7 @@ import { menuContext } from '../../../../context/MenuContext'
 const TotalQuestionMenu = () => {
 	const { handleTotalQuestions } = useContext(menuContext)
 	return (
-		<section className='flex flex-col items-center gap-3 w-[320px]'>
+		<section className='flex flex-col items-center gap-3 w-[320px] h-[200px]'>
 			<h2 className='text-3xl font-semibold'>
 				Selecciona la cantidad de preguntas
 			</h2>
