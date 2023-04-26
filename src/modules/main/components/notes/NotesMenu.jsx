@@ -1,13 +1,13 @@
 const NotesMenu = () => {
 	return (
-		<section>
-			<h2>
+		<section className="flex flex-col  justify-around w-[520px] h-[200px] text-3xl gap-5">
+			<h1>
 				Tendrás tres comodines por ronda, puedes utilizarlos una vez cada uno
-			</h2>
-			<section>
-				<span>Descarta 2 preguntas incorrectas</span>
-				<span>Suma 20 segundos al reloj</span>
-				<span>Cambia la pregunta por otra</span>
+			</h1>
+			<section className="text-left">
+				<h3>Descarta 2 preguntas incorrectas</h3>
+				<h3>Suma 20 segundos al reloj</h3>
+				<h3>Cambia la pregunta por otra</h3>
 			</section>
 		</section>
 	)
