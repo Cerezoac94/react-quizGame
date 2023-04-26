@@ -17,29 +17,31 @@ const ResultsContainer = () => {
 	}
 
 	return (
-		<section>
+		<section className='flex flex-col text-center justify-around items-center w-11/12 h-5/6 bg-slate-600' >
+
 			<Title text='Resultados' />
 
-			<table>
-				<tbody>
-					<tr>
-						<td>Dificultad</td>
-						<td>{difficulty}</td>
+			<table className="flex flex-col  justify-center w-[520px] h-[200px] text-3xl gap-5">
+				<tbody className='h-full flex flex-col align-center justify-between'>
+					<tr className='flex flex-row justify-around '>
+						<td className='w-[250px]'>Dificultad</td>
+						<td className='w-[250px]'>{difficulty}</td>
 					</tr>
-					<tr>
-						<td>Total preguntas</td>
-						<td>{totalQuestions}</td>
+					<tr className='flex flex-row justify-around'>
+						<td className='w-[250px]'>Total preguntas</td>
+						<td className='w-[250px]'>{totalQuestions}</td>
 					</tr>
-					<tr>
-						<td>Aciertos</td>
-						<td>{hits}</td>
+					<tr className='flex flex-row justify-around'>
+						<td className='w-[250px]'>Aciertos</td>
+						<td className='w-[250px]'>{hits}</td>
 					</tr>
-					<tr>
-						<td>Comodines usados</td>
-						<td>pendiente</td>
+					<tr className='flex flex-row justify-around'>
+						<td className='w-[250px]'>Comodines usados</td>
+						<td className='w-[250px]'>pendiente</td>
 					</tr>
-					<tr>
-						<td>Puntaje {Math.trunc((hits / totalQuestions) * 100)}</td>
+					<tr className='flex flex-row justify-around text-center'>
+						<td className='w-[250px]'>Puntaje</td>
+						<td className='w-[250px]'>{Math.trunc((hits / totalQuestions) * 100)}</td>
 					</tr>
 				</tbody>
 			</table>
