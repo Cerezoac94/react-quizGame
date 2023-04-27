@@ -30,7 +30,7 @@ const CardQuestion = () => {
 			<p className='w-[800px] h-28 flex flex-col border-2 border-white rounded-xl text-3xl font-semibold'>{`Pregunta ${
 				questionNumber + 1
 			}:  ${question}`}</p>
-			<section className='w-[720px] flex flex-wrap justify-center gap-3'>
+			<section className='w-[720px] h-[200px] flex flex-wrap justify-center gap-3'>
 				{options.map((option, i) => (
 					<p
 						className=' w-[330px] h-[85px] text-3xl py-3 px-4 border border-white rounded-xl hover:border-blue-700 hover:border-2'

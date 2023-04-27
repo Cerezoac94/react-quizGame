@@ -5,7 +5,7 @@ import { menuContext } from '../../../../context/MenuContext'
 const DifficultyMenu = () => {
 	const { handleDifficulty } = useContext(menuContext)
 	return (
-		<section className='flex flex-col items-center gap-3 w-[320px]'>
+		<section className='flex flex-col items-center gap-3 w-[320px] h-[200px]'>
 			<h1 className='text-3xl font-semibold'>Selecciona una Dificultad</h1>
 			<section className='flex flex-wrap justify-center gap-3'>
 				<Button f={() => handleDifficulty('Fácil')} text='Fácil' />
