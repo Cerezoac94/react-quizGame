@@ -7,7 +7,7 @@ const DifficultyMenu = () => {
 	const { handleDifficulty, difficulty } = useContext(menuContext)
 	const { active, handleActive } = useActive(difficulty)
 	return (
-		<section className='flex flex-col items-center gap-3 w-[320px] h-[200px]'>
+		<section className='flex flex-col items-center gap-3 w-[260px] md:w-[320px] h-[200px]'>
 			<h1 className='text-3xl font-semibold'>Selecciona una Dificultad</h1>
 			<section className='flex flex-wrap justify-center gap-3'>
 				<Button

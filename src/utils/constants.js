@@ -191,7 +191,7 @@ export const preg = [
 				'id': '8m',
 				'pregunta': 'Qué afirma el principio de Arquímedes?',
 				'respuestas_incorrectas': [
-					'Todo objeto en reposo permanece en reposo y todo objeto en movimiento permanece en movimiento, a menos que actúe sobre él una fuerza neta.',
+					'Todo objeto en reposo permanece en reposo, a menos que actúe sobre él una fuerza neta.',
 					'La energía total del universo es constante.',
 					'La fuerza que actúa sobre un cuerpo es directamente proporcional a la aceleración que adquiere.',
 				],

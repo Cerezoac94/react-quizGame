@@ -33,13 +33,13 @@ const CardQuestion = () => {
 
 	return (
 		<section className='h-full flex flex-col items-center justify-around'>
-			<p className='w-[800px] h-28 flex flex-col border-2 border-white rounded-xl text-3xl font-semibold'>{`Pregunta ${
+			<p className='w-full max-w-[800px] h-28 flex flex-col border-2 border-white rounded-xl md:text-3xl text-xl font-semibold px-2'>{`Pregunta ${
 				questionNumber + 1
 			}:  ${question}`}</p>
-			<section className='w-[720px] h-[200px] flex flex-wrap justify-center gap-3'>
+			<section className='w-11/12 max-w-[720px] min-h-[200px] flex flex-wrap justify-center content-center gap-3'>
 				{options.map((option, i) => (
 					<p
-						className={` w-[330px] h-[85px] text-3xl py-3 px-4 border  rounded-xl hover:border-blue-700 hover:border-2 ${
+						className={` flex w-5/12 min-h-[70px] h-auto md:text-3xl text-xl  py-3 px-4 border  rounded-xl hover:border-blue-700 hover:border-2 ${
 							active === i ? 'border-blue-700 border-2' : 'border-white'
 						}`}
 						key={i}

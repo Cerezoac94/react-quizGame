@@ -19,7 +19,7 @@ const MainContainer = () => {
 	}
 
 	return (
-		<section className='flex flex-col text-center justify-around items-center w-11/12 h-5/6 bg-slate-600'>
+		<section className='flex flex-col text-center justify-around items-center w-11/12 max-w-[950px] h-[450px] max-h-[480px] p-10 bg-slate-600 '>
 			{page == 3 ? (
 				<>
 					<Title text='NOTES' />

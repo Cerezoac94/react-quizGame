@@ -6,7 +6,7 @@ const TotalQuestionMenu = () => {
 	const { handleTotalQuestions, totalQuestions } = useContext(menuContext)
 	const { active, handleActive } = useActive(totalQuestions)
 	return (
-		<section className='flex flex-col items-center gap-3 w-[320px] h-[200px]'>
+		<section className='flex flex-col items-center gap-3 w-[260px] md:w-[320px] h-[200px]'>
 			<h2 className='text-3xl font-semibold'>
 				Selecciona la cantidad de preguntas
 			</h2>
