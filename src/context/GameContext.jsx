@@ -19,9 +19,12 @@ const GameContext = ({ children }) => {
 		if (value == answer[qn]) setHits(hits + 1)
 	}
 
+	const resetHits = () => setHits(0)
+
 	const dataGame = {
 		handleQuestions,
 		handleHits,
+		resetHits,
 		questions,
 		options,
 		hits,

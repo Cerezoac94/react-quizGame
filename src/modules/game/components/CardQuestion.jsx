@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useGame } from '../../../hooks/useGame'
 import Button from '../../../components/button/Button'
 import { useContext } from 'react'
 import { gameContext } from '../../../context/GameContext'
 import { useNavigate } from 'react-router-dom'
+import { useActive } from '../../../hooks/useActive'
 
 const CardQuestion = () => {
 	const { handleHits, options: op, questions } = useContext(gameContext)
@@ -12,16 +13,21 @@ const CardQuestion = () => {
 		op,
 		questions
 	)
+	const { active, handleActive } = useActive()
 	const navigate = useNavigate()
-	let answer = ''
+	const [answer, setAnswer] = useState('')
+
+	let respuesta = ''
 
 	const handleAnswer = o => {
-		answer = o
+		respuesta = o
+		setAnswer(o)
 	}
 	const handleQuestion = () => {
 		handleDataQuestion(answer)
 	}
 	const handleResults = () => {
+		handleQuestion()
 		navigate('/results')
 	}
 
@@ -33,9 +39,14 @@ const CardQuestion = () => {
 			<section className='w-[720px] h-[200px] flex flex-wrap justify-center gap-3'>
 				{options.map((option, i) => (
 					<p
-						className=' w-[330px] h-[85px] text-3xl py-3 px-4 border border-white rounded-xl hover:border-blue-700 hover:border-2'
+						className={` w-[330px] h-[85px] text-3xl py-3 px-4 border  rounded-xl hover:border-blue-700 hover:border-2 ${
+							active === i ? 'border-blue-700 border-2' : 'border-white'
+						}`}
 						key={i}
-						onClick={() => handleAnswer(option)}>
+						onClick={() => {
+							handleActive(i)
+							handleAnswer(option)
+						}}>
 						{option}
 					</p>
 				))}
@@ -43,7 +54,13 @@ const CardQuestion = () => {
 			{questionNumber + 1 == questions?.length ? (
 				<Button f={() => handleResults()} text={'Terminar'} />
 			) : (
-				<Button f={() => handleQuestion()} text={'Siguiente'} />
+				<Button
+					f={() => {
+						handleQuestion()
+						handleActive('')
+					}}
+					text={'Siguiente'}
+				/>
 			)}
 		</section>
 	)

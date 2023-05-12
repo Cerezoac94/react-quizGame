@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../App'
-import Main from '../views/Main'
-import Game from '../views/Game'
-import Results from '../views/Results'
+import Main from '../pages/Main'
+import Game from '../pages/Game'
+import Results from '../pages/Results'
 
 const router = createBrowserRouter([
 	{
